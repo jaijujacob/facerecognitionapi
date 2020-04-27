@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "PORT=3000 server.js"
+    "start": "node server.js"
   },
   "author": "Jaiju Jacob",
   "license": "ISC",
