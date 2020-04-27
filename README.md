@@ -28,3 +28,5 @@ Heroku Commands
 ---------------------------------------------------------
 heroku addons
 heroku pg:info
+heroku info
+heroku config
