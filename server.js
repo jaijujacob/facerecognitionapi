@@ -11,10 +11,12 @@ const image = require('./controllers/image');
 const db = knex({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'jaiju',
-        password: 'Pass',
-        database: 'smart-brain'
+        host : process.env.DATABASE_URL,
+        ssl:true
+        // host: '127.0.0.1',
+        // user: 'jaiju',
+        // password: 'Pass',
+        // database: 'smart-brain'
     }
 });
 db.select('*').from('users').then(data => {
@@ -31,7 +33,8 @@ app.use(cors());
 
 
 app.get('/', (req, resp) => {
-    resp.send(database.users);
+
+    // resp.send(database.users);
 })
 
 //Controllers
