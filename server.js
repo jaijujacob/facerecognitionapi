@@ -33,7 +33,7 @@ app.use(cors());
 
 
 app.get('/', (req, resp) => {
-
+    resp.json("Its working!");
     // resp.send(database.users);
 })
 
